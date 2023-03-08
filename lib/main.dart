@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:route/page_dua.dart';
+import 'package:route/page_satu.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,31 +16,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: PageSatu(),
+      routes: {
+        'page_satu': (context) => PageSatu(),
+        'page_dua': (context) => PageDua(),
+      },
     );
-  }
-}
-
-class PageSatu extends StatelessWidget {
-  const PageSatu({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("Page 1"),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => PageDua()),
-              );
-            },
-            child: Text("Pindah Ke Halaman 2"),
-          ),
-        ));
   }
 }
