@@ -19,6 +19,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         'page_satu': (context) => PageSatu(),
         'page_dua': (context) => PageDua(),
+        
       },
     );
   }
